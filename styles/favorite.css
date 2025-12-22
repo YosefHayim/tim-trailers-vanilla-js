@@ -15,6 +15,7 @@
   border: none;
   position: absolute;
   cursor: pointer;
+  margin-bottom: 5em;
 }
 .fav-play-button-btn {
   transform: translate(0, -22.5em);
@@ -95,10 +96,9 @@
 }
 
 .fav-white-share-img {
-  background: black;
-  border-radius: 100em;
+  border-radius: 2em;
   padding: 0.5em;
-  height: 3em;
+  height: 2em;
   transform: translate(-7em, -12em);
 }
 
@@ -125,8 +125,6 @@
 .fav-remove-btn-img,
 .fav-white-data-img {
   height: 2em;
-  border: 1px solid #00000063;
-  background: black;
   border-radius: 2em;
   padding: 0.5em;
   position: relative;
