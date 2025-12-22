@@ -562,6 +562,19 @@ a {
   z-index: 9999;
 }
 
+/* Hide all content except loader when page is loading */
+body.loading > *:not(main) {
+  visibility: hidden;
+}
+
+body.loading main > *:not(.overlay-container) {
+  visibility: hidden;
+}
+
+body.loading .overlay-container > *:not(.loader):not(.overlay) {
+  visibility: hidden;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);

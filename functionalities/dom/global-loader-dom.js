@@ -1,17 +1,16 @@
 // Adds a loader animation that triggers when the browser is loading.
 const screenLoadingAnimation = () => {
-  window.addEventListener("load", () => {
-    // Hide all elements except those with the class .loader.
-    document.body.querySelectorAll("*:not(.loader)").forEach((element) => {
-      element.style.display = "none";
-    });
+  // Add loading class to body initially to hide content
+  document.body.classList.add("loading");
 
-    // After 500ms, show all elements again and hide the loader.
+  window.addEventListener("load", () => {
+    // After page loads, wait 500ms then hide loader and show content
     setTimeout(() => {
-      document.querySelectorAll("*:not(.loader)").forEach((element) => {
-        element.style.display = "";
-      });
-      document.querySelector(".loader").style.display = "none";
+      document.body.classList.remove("loading");
+      const loader = document.querySelector(".loader");
+      if (loader) {
+        loader.style.display = "none";
+      }
     }, 500);
   });
 };
